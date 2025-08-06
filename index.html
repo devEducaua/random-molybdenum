@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molibdenio Generator</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: monospace;
+        }
+
+        main {
+            background-color: #ddd;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        img {
+            width: 400px;
+        }
+
+        p {
+            font-size: 5em;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 100px;
+            color: #fff;
+            font-size: 2em;
+            padding: 15px 50px;
+            border-radius: 6px;
+            border: none;
+            background-color: #000;
+            box-shadow: 4px 4px 15px #000;
+        }
+
+        button:hover {
+            background-color: #111111;
+            color: #ddd;
+        }
+    </style>
+
+    <main>
+        <img src="molibdenio.jpg" alt="molibdenio">
+        <button onclick="generate()">Gerar</button>
+        <p id="p"></p>
+    </main>
+
+    <script>
+        const p = document.getElementById("p");
+
+        function generate() {
+            const arr = ['a', 'e', 'u', 'i', 'o'];
+
+            const v1 = arr[Math.floor(Math.random() * arr.length)];
+            const v2 = arr[Math.floor(Math.random() * arr.length)];
+            const v3 = arr[Math.floor(Math.random() * arr.length)];
+            const v4 = arr[Math.floor(Math.random() * arr.length)];
+            const v5 = arr[Math.floor(Math.random() * arr.length)];
+
+            const word = `m${v1}l${v2}b${v3}d${v4}n${v5}`;
+
+            p.textContent = word;
+        }
+    </script>
+</body>
+</html>
+
