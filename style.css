@@ -2,15 +2,21 @@
     padding: 0;
     margin: 0;
     font-family: monospace;
+    background-color: #ddd;
 }
 
 main {
-    background-color: #ddd;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+@media screen and (max-width: 300px) {
+    p {
+        font-size: 2em;
+    }
 }
 
 img {
