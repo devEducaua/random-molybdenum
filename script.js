@@ -11,7 +11,7 @@ document.getElementById("btn").addEventListener("click", () => {
     const v4 = vowels[Math.floor(Math.random() * vowels.length)];
     const v5 = vowels[Math.floor(Math.random() * vowels.length)];
 
-    if (Math.floor((Math.random() * 100) + 1) < 2) {
+    if (Math.floor((Math.random() * 1000) + 1) < 2) {
         word = "molibdênio";
     } else {
         word = `m${v1}l${v2}b${v3}d${v4}n${v5}`;
