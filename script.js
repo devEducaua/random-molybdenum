@@ -1,6 +1,8 @@
 
 document.getElementById("btn").addEventListener("click", () => {
     const p = document.getElementById("p");
+    p.style.fontFamily = "monospace";
+    p.style.fontStyle = "normal"
     
     let word = "";
 
@@ -17,8 +19,11 @@ document.getElementById("btn").addEventListener("click", () => {
         word = `m${v1}l${v2}b${v3}d${v4}n${v5}`;
     }
 
-    if (v1 == v2 && v2 == v3 && v3 == v4 && v4 == v5 || word == "molibdênio") alert("You get a special word");
+    if (v1 == v2 && v2 == v3 && v3 == v4 && v4 == v5 || word == "molibdênio") {
+        alert("You get a special word");
+        p.style.fontFamily = "Times New Roman";// Times, serif;
+        p.style.fontStyle = "italic";
+    }
 
     p.textContent = word;
-
 })
