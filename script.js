@@ -7,6 +7,7 @@ document.getElementById("btn").addEventListener("click", () => {
     let word = "";
 
     const vowels = ['a', 'e', 'u', 'i', 'o'];
+
     const v1 = vowels[Math.floor(Math.random() * vowels.length)];
     const v2 = vowels[Math.floor(Math.random() * vowels.length)];
     const v3 = vowels[Math.floor(Math.random() * vowels.length)];
@@ -21,7 +22,7 @@ document.getElementById("btn").addEventListener("click", () => {
 
     if (v1 == v2 && v2 == v3 && v3 == v4 && v4 == v5 || word == "molibdênio") {
         alert("You get a special word");
-        p.style.fontFamily = "Times New Roman";// Times, serif;
+        p.style.fontFamily = "Times New Roman";
         p.style.fontStyle = "italic";
     }
 
