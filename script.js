@@ -10,19 +10,17 @@ document.getElementById("btn").addEventListener("click", () => {
 
     
     const v1 = vowels[Math.floor(Math.random() * vowels.length)];
-    const v2 = vowels[Math.floor(Math.random() * vowels.length)];
+    let v2 = vowels[Math.floor(Math.random() * vowels.length)];
     const v3 = vowels[Math.floor(Math.random() * vowels.length)];
     const v4 = vowels[Math.floor(Math.random() * vowels.length)];
-    const v5 = vowels[Math.floor(Math.random() * vowels.length)];
+    let v5 = vowels[Math.floor(Math.random() * vowels.length)];
 
-    const num = Math.floor(Math.random() * 1000) + 1;
+    const num = Math.floor(Math.random() * 5) + 1;
 
     if (specialWord) {
         if (num < 2) {
             word = "seabórgio";
         } else {
-            word = `s${v1}${v2}b${v3}rg${v4}${v5}`
-
             if (v1 == v2) {
                 v2 = "";
                 // word = `s${v1}b${v3}rg${v4}${v5}`
@@ -31,6 +29,7 @@ document.getElementById("btn").addEventListener("click", () => {
                 v5 = "";
                 // word = `s${v1}${v2}b${v3}rg${v4}`
             }
+            word = `s${v1}${v2}b${v3}rg${v4}${v5}`
         }
     } else {
         if (num < 2) {
@@ -40,7 +39,7 @@ document.getElementById("btn").addEventListener("click", () => {
         }
     }
     
-    if (v1 == v2 && v2 == v3 && v3 == v4 && v4 == v5) {
+    if (v1 == v2 && v2 == v3 && v3 == v4 && v4 == v5 || word == "molibdênio" || word == "seabórgio") {
         alert("You get a special word");
         p.style.fontFamily = "Times New Roman";
         p.style.fontStyle = "italic";
