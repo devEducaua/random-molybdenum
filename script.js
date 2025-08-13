@@ -24,10 +24,12 @@ document.getElementById("btn").addEventListener("click", () => {
             word = `s${v1}${v2}b${v3}rg${v4}${v5}`
 
             if (v1 == v2) {
-                word = `s${v1}b${v3}rg${v4}${v5}`
+                v2 = "";
+                // word = `s${v1}b${v3}rg${v4}${v5}`
             }
             if (v4 == v5) {
-                word = `s${v1}${v2}b${v3}rg${v4}`
+                v5 = "";
+                // word = `s${v1}${v2}b${v3}rg${v4}`
             }
         }
     } else {
