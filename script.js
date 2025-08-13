@@ -15,7 +15,7 @@ document.getElementById("btn").addEventListener("click", () => {
     const v4 = vowels[Math.floor(Math.random() * vowels.length)];
     let v5 = vowels[Math.floor(Math.random() * vowels.length)];
 
-    const num = Math.floor(Math.random() * 5) + 1;
+    const num = Math.floor(Math.random() * 1000) + 1;
 
     if (specialWord) {
         if (num < 2) {
@@ -23,11 +23,9 @@ document.getElementById("btn").addEventListener("click", () => {
         } else {
             if (v1 == v2) {
                 v2 = "";
-                // word = `s${v1}b${v3}rg${v4}${v5}`
             }
             if (v4 == v5) {
                 v5 = "";
-                // word = `s${v1}${v2}b${v3}rg${v4}`
             }
             word = `s${v1}${v2}b${v3}rg${v4}${v5}`
         }
