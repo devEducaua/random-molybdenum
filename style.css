@@ -5,6 +5,11 @@
     background-color: #ddd;
 }
 
+.special {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+}
+
 main {
     height: 100vh;
     display: flex;
