@@ -74,6 +74,7 @@ p {
     border: none;
     background-color: var(--btn-bg);
     box-shadow: 4px 4px 15px #000;
+    outline: none;
 }
 
 #btn:hover {
