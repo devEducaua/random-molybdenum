@@ -1,8 +1,37 @@
+:root {
+    --bg: #ddd;
+    --fg: #000;
+    --btn-fg: #fff;
+    --btn-bg: #000;
+    --img-shadow: #aaa;
+    --btn-shadow: #000;
+}
+
+.dark {
+    --bg: #000;
+    --fg: #ddd;
+    --btn-bg: #111;
+    --img-shadow: #333;
+}
+
 * {
     padding: 0;
     margin: 0;
     font-family: monospace;
-    background-color: #ddd;
+    background-color: var(--bg);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: var(--bg);
+    color: var(--fg);
 }
 
 .special {
@@ -27,26 +56,27 @@ main {
 img {
     width: 400px;
     border-radius: 6px;
-    box-shadow: -0px -0px 15px #aaa;
+    box-shadow: -0px -0px 15px var(--img-shadow);
 }
 
 p {
+    color: var(--fg);
     font-size: 5em;
     font-weight: bold;
 }
 
-button {
+#btn {
     margin: 100px;
-    color: #fff;
+    color: var(--btn-fg);
     font-size: 2em;
     padding: 15px 50px;
     border-radius: 6px;
     border: none;
-    background-color: #000;
+    background-color: var(--btn-bg);
     box-shadow: 4px 4px 15px #000;
 }
 
-button:hover {
-    background-color: #111111;
-    color: #ddd;
+#btn:hover {
+    box-shadow: 6px 6px 15px var(--btn-shadow);
+    transition: all 0.1;
 }

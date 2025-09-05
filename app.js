@@ -1,13 +1,31 @@
-const btn = document.getElementById("btn")
-const p = document.getElementById("p")
+const btn = document.getElementById("btn");
+const p = document.getElementById("p");
 
+// Toggle Theme
+const toggletheme = document.getElementById("toggletheme");
+let dark = localStorage.getItem("dark");
+function enable() {
+    document.body.classList.add("dark")
+    localStorage.setItem('dark', 'true')
+}
+function disable() {
+    document.body.classList.remove('dark')
+    localStorage.setItem("dark", "false")
+}
+
+if (dark === "true") enable();
+toggletheme.addEventListener("click", () => {
+    dark = localStorage.getItem("dark");
+    dark != "true" ? enable() : disable();
+})
+
+// Logic
 const map = new Map([
     [0, "molibdênio"],
     [1, "seabórgio"],
     [2, "tecnécio"],
 ]);
 
-const sessions = [ "molibdenio", "seaborgio" ];
 let currentSession = 0;
 
 function generateBySession(session) {
