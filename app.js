@@ -24,6 +24,7 @@ const map = new Map([
     [0, "molibdênio"],
     [1, "seabórgio"],
     [2, "tecnécio"],
+    [3, "tungstênio"]
 ]);
 
 let currentSession = 0;
@@ -60,6 +61,11 @@ function generateBySession(session) {
         case "tecnécio":
             if (v3 == v4) v4 = "";
             word = `t${v1}cn${v2}c${v3}${v4}`
+            break;
+
+        case "tungstênio":
+            if (v3 == v4) v4 = "";
+            word = `t${v1}ngst${v2}n${v3}${v4}`;
             break;
     }
 
