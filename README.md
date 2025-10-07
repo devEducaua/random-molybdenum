@@ -1,3 +1,3 @@
 # Random Molybdenum
 > [!WARNING]
-> This is not a seriosly project. 
+> This is not a seriosly project.
