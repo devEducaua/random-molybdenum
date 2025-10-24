@@ -33,7 +33,9 @@ function generateBySession(session) {
     let isSpecial = false;
     p.classList.remove("special");
 
-    const num = Math.floor(Math.random() * 100) +1
+    const specialPossibility = 1000;
+
+    const num = Math.floor(Math.random() * specialPossibility) +1
     if (num < 2) isSpecial = true;
 
     const vowels = ['a', 'e', 'i', 'o', 'u'];
